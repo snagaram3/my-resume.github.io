@@ -1377,13 +1377,13 @@
         const skillObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const progress = entry.target.querySelector('.skill-progress');
-                    if (progress) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress');
+                    progressBars.forEach((progress, index) => {
                         const width = progress.getAttribute('data-width');
                         setTimeout(() => {
                             progress.style.width = width + '%';
-                        }, 100);
-                    }
+                        }, 100 + (index * 100));
+                    });
                 }
             });
         }, { threshold: 0.5 });
