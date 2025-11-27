@@ -632,6 +632,69 @@
             transform: rotateY(360deg) scale(1.2);
         }
 
+        .kubestronaut-badge {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(14, 165, 233, 0.2));
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        .kubestronaut-badge::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        .kubestronaut-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .kubestronaut-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .kubestronaut-stats {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            border: 1px solid var(--primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cert-category-title {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin: 2rem 0 1.5rem 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -984,6 +1047,43 @@
 
     <section id="certifications" class="section" style="background: var(--dark-light);">
         <h2 class="section-title">Certifications</h2>
+
+        <div class="kubestronaut-badge">
+            <div class="kubestronaut-title">🚀 Kubestronaut 🚀</div>
+            <div class="kubestronaut-subtitle">Elite Kubernetes Professional - All 5 CNCF Certifications Achieved</div>
+            <div class="kubestronaut-stats">⭐ One of ~2,000 Kubestronauts Worldwide ⭐</div>
+        </div>
+
+        <h3 class="cert-category-title">☸️ Kubernetes Certifications</h3>
+        <div class="certs">
+            <div class="cert-card" data-tilt>
+                <div class="cert-icon">☸️</div>
+                <h3>CKA</h3>
+                <p>Certified Kubernetes Administrator</p>
+            </div>
+            <div class="cert-card" data-tilt>
+                <div class="cert-icon">☸️</div>
+                <h3>CKAD</h3>
+                <p>Certified Kubernetes Application Developer</p>
+            </div>
+            <div class="cert-card" data-tilt>
+                <div class="cert-icon">☸️</div>
+                <h3>CKS</h3>
+                <p>Certified Kubernetes Security Specialist</p>
+            </div>
+            <div class="cert-card" data-tilt>
+                <div class="cert-icon">☸️</div>
+                <h3>KCNA</h3>
+                <p>Kubernetes and Cloud Native Associate</p>
+            </div>
+            <div class="cert-card" data-tilt>
+                <div class="cert-icon">☸️</div>
+                <h3>KCSA</h3>
+                <p>Kubernetes and Cloud Native Security Associate</p>
+            </div>
+        </div>
+
+        <h3 class="cert-category-title">☁️ Cloud & Networking Certifications</h3>
         <div class="certs">
             <div class="cert-card" data-tilt>
                 <div class="cert-icon">☁️</div>
@@ -993,12 +1093,7 @@
             <div class="cert-card" data-tilt>
                 <div class="cert-icon">🌐</div>
                 <h3>CCNA</h3>
-                <p>Cisco Certified</p>
-            </div>
-            <div class="cert-card" data-tilt>
-                <div class="cert-icon">☸️</div>
-                <h3>CKAD</h3>
-                <p>Kubernetes Developer</p>
+                <p>Cisco Certified Network Associate</p>
             </div>
         </div>
     </section>
