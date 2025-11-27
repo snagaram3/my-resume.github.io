@@ -413,6 +413,89 @@
             z-index: 1;
         }
 
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .specialties {
+            background: rgba(99, 102, 241, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .specialties h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .specialties ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .specialties li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .specialties li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .impact-highlights {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(14, 165, 233, 0.1));
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .impact-highlights h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .impact-highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .impact-highlights li {
+            padding: 0.5rem 0 0.5rem 1.8rem;
+            position: relative;
+            color: var(--text);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .impact-highlights li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
         .section-title {
             font-size: 2.5rem;
             margin-bottom: 3rem;
@@ -811,12 +894,12 @@
             <div class="subtitle">
                 <span class="typing-text"></span>
             </div>
-            <p>10+ years transforming infrastructure with cloud-native solutions, Kubernetes expertise, and a passion for automation. Driving efficiency and innovation at scale.</p>
+            <p>12+ years transforming infrastructure with cloud-native solutions, Kubernetes expertise, and a passion for automation. Driving efficiency and innovation at scale.</p>
             <a href="#contact" class="btn">Get In Touch</a>
 
             <div class="achievement-stats">
                 <div class="stat-box">
-                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-number" data-target="12">0</span>
                     <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="stat-box">
@@ -837,9 +920,44 @@
 
     <section id="about" class="section">
         <h2 class="section-title">About Me</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-light);">
-            Cloud-first DevOps Engineer with over 10 years of experience delivering cutting-edge automation solutions for high-profile companies including Verizon, Sysco Labs, and Citigroup. Specialized in Kubernetes, AWS, and building robust CI/CD pipelines that drive efficiency and reduce deployment times by up to 40%.
-        </p>
+        <div class="about-content">
+            <p>
+                I'm a Senior Platform Engineer with 12+ years of experience designing and operating scalable, reliable cloud-native platforms. My career has focused on helping development teams move faster and safer by building resilient infrastructure, automating delivery pipelines, and reducing operational overhead.
+            </p>
+            <p>
+                At my current role, I led the migration of microservices from VMware Tanzu PCF to Kubernetes, introducing Helm-based application deployments, Argo CD GitOps workflows, and observability with Prometheus + Grafana. This enabled multiple product teams to ship more confidently while cutting deployment times by 40% and improving service reliability.
+            </p>
+
+            <div class="specialties">
+                <h3>I specialize in:</h3>
+                <ul>
+                    <li><strong>Kubernetes platform engineering</strong> — architecting clusters, service meshes, autoscaling (HPA/KEDA), and stateful services (Redis, RabbitMQ, PostgreSQL)</li>
+                    <li><strong>Infrastructure as Code</strong> — Terraform, Helm, Vault integration for secure secrets management</li>
+                    <li><strong>Cloud cost optimization & resiliency</strong> — designing HA/DR patterns, rightsizing workloads, and monitoring efficiency</li>
+                    <li><strong>Developer enablement</strong> — building internal platforms that abstract complexity and empower engineers to focus on features, not infra</li>
+                </ul>
+            </div>
+
+            <p>
+                What sets me apart is the ability to bridge hands-on engineering with strategic architecture decisions: I've partnered with product teams, security, and leadership to align platform capabilities with business outcomes.
+            </p>
+
+            <div class="impact-highlights">
+                <h3>📈 Impact highlights:</h3>
+                <ul>
+                    <li>Deployed Kubernetes platform used by 20+ teams, enabling self-service deployments</li>
+                    <li>Implemented GitOps pipelines that reduced release rollbacks by 60%</li>
+                    <li>Optimized cluster workloads, cutting cloud spend by 25% in one quarter</li>
+                </ul>
+            </div>
+
+            <p>
+                I'm now looking to take on broader infrastructure architecture / platform leadership roles, where I can design cloud-native systems at scale, mentor engineers, and drive transformation initiatives.
+            </p>
+            <p style="text-align: center; color: var(--primary); font-weight: 600; margin-top: 2rem;">
+                Let's connect if you're exploring opportunities to modernize infrastructure, scale platforms, or build developer productivity in the cloud.
+            </p>
+        </div>
     </section>
 
     <section id="skills" class="section" style="background: var(--dark-light);">
